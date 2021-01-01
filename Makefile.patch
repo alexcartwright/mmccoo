@@ -1,0 +1,17 @@
+diff --git a/Makefile b/Makefile
+index 5da7212..6e14bff 100644
+--- a/Makefile
++++ b/Makefile
+@@ -15,9 +15,9 @@ CPPFLAGS = -Wall -std=c++17 $(OPT) -pthread -DDLLX= -I. -I../leveldb-mcpe/includ
+ 
+ LDDFLAGS = -L../leveldb-mcpe/out-static -lleveldb -L../snappy/install/lib -lsnappy -lpthread -lz -lboost_program_options -lboost_filesystem -lboost_system
+ 
+-ifneq ("$(wildcard /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-config)","")
+-	IMAGICK_CPP = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-config  --cxxflags)
+-	IMAGICK_LDD = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.7/bin-q16/Magick++-config  --ldflags)
++ifneq ("$(wildcard /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.10/bin-q16/Magick++-config)","")
++	IMAGICK_CPP = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.10/bin-q16/Magick++-config  --cxxflags)
++	IMAGICK_LDD = $(shell /usr/lib/x86_64-linux-gnu/ImageMagick-6.9.10/bin-q16/Magick++-config  --ldflags)
+ else
+ 	IMAGICK_CPP = $(shell Magick++-config  --cxxflags)
+ 	IMAGICK_LDD = $(shell Magick++-config  --ldflags)
