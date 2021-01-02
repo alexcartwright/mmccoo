@@ -11,7 +11,8 @@ RUN apt-get update && \
     libmagick++-6-headers \ 
     libmagick++-6.q16-dev \
     npm \
-    wget
+    wget \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home
 
@@ -40,6 +41,7 @@ WORKDIR /home/CGAL-4.14.3
 RUN cmake . && make && make install
 
 WORKDIR /home/minecraft_mmccoo
+# Update Makefile to reference ImageMagick-6.9.10 instead of ImageMagick-6.9.7
 COPY Makefile.patch .
 RUN git apply Makefile.patch && make
 
