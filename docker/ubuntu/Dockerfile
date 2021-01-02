@@ -5,11 +5,12 @@ RUN apt-get update && \
     apt-get install -y --fix-missing \
     build-essential \ 
     cmake \
+    git \
     libboost-all-dev \
     libcgal-dev \
+    libmagick++-6-headers \ 
+    libmagick++-6.q16-dev \
     npm \
-    git \
-    libmagick++-6-headers libmagick++-6.q16-dev \
     wget
 
 WORKDIR /home
