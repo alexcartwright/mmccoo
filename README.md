@@ -18,8 +18,13 @@ Run server listening on port 80
     
 Open http://localhost in browser
 
-# Access the container shell
-The following command provides shell access on the container:
+Stop container
+
+    docker-compose down
+    docker-compose down -v (-v option removes the world's map data created by basic_test from /var/www)
+
+# Shell access
+The following command provides shell access to the container:
 
     docker-compose run --rm minecraft_mmccoo bash
     
