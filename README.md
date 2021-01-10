@@ -10,7 +10,7 @@ Build the images.
     
 Run basic_test on the example world database
 
-    docker-compose run --rm minecraft_mmccoo /home/minecraft_mmccoo/basic_test --db_path /home/db
+    docker-compose run --rm minecraft_mmccoo /basic_test --db_path /home/db
     
 Run server listening on port 80
 
@@ -26,8 +26,9 @@ Stop container
 # Shell access
 The following command provides shell access to the container:
 
-    docker-compose run --rm minecraft_mmccoo bash
-    
+    docker-compose run --rm minecraft_mmccoo sh
+    docker-compose run --rm nginx sh
+
 # Bedrock Minecraft World db
 If you want to run the example on your own local minecraft world db files, simply change the following line in the docker-compose.yml file:
 
